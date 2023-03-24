@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: absolute;
+    top: 30%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    text-align: center;
+}
+
+#players-win {
+    display: flex;
+}
+
+#players-win {
+    display: flex;
+    flex-direction: column;
+}
+
+#game-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#players {
+    display: flex;
+    align-items: center;
+}
+
+.card,
+.winer,
+button {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    margin: 2px;
+}
+
+button {
+    border-color: navy;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: navy;
+}
+
+button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: aqua;
+    box-shadow: 2px 2px 0 navy;
+}
+
+.card {
+    padding: 5px;
+    width: 150px;
+    background-color: green;
+}
+
+.winer {
+    padding: 5px;
+    width: 150px;
+    background-color: navy;
+}
