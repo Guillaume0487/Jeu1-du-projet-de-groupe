@@ -4,6 +4,7 @@ function verify1() {
     if (lstWiners.length > 0) {
         return;
     } if (document.getElementsByClassName("card").length > 1) {
+        cacherBtn(1)
         play1();
     } else {
         return;
@@ -14,6 +15,7 @@ function verify2() {
     if (lstWiners.length > 0) {
         return;
     } if (document.getElementsByClassName("card").length > 3) {
+        cacherBtn(2)
         play2();
     } else {
         return;
@@ -49,8 +51,8 @@ function play2() {
         const number2 = play1();
         setTimeout(() => {
             const number3 = play1();
-        }, 5100);
-    }, 5100);
+        }, 5000);
+    }, 5000);
 }
 
 function podium(str) {
@@ -68,12 +70,30 @@ function podium(str) {
 function refresh() {
     const winer = document.getElementsByClassName("winer");
     lstWiners = [];
-    for (let i = 0; i < winer.length; i++) {
-        winer[i].className = "card";
-    } for (let i = 0; i < winer.length; i++) {
-        winer[i].className = "card";
+    while (winer.length > 0) {
+        for (let i = 0; i < winer.length; i++) {
+            winer[i].className = "card";
+        }
     } document.getElementById("lst-winers").remove();
     const newDiv = document.createElement("div");
     newDiv.id = "lst-winers";
     document.getElementById("players-win").appendChild(newDiv);
+}
+
+function cacherBtn(n) {
+    for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
+        document.getElementsByClassName("btn")[i].hidden = true
+    } if (n == 1) {
+        setTimeout(() => {
+            for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
+                document.getElementsByClassName("btn")[i].hidden = false
+            }
+        }, 5000);
+    } if (n == 2) {
+        setTimeout(() => {
+            for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
+                document.getElementsByClassName("btn")[i].hidden = false
+            }
+        }, 5000 * 3);
+    }
 }
