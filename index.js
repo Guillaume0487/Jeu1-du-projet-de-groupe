@@ -1,5 +1,5 @@
 let lstWiners = []
-
+//verif
 function verify1() {
     if (lstWiners.length > 0) {
         return;
