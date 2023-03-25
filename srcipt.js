@@ -46,11 +46,11 @@ function play1() {
 }
 
 function play2() {
-    const number1 = play1();
+    play1();
     setTimeout(() => {
-        const number2 = play1();
+        play1();
         setTimeout(() => {
-            const number3 = play1();
+            play1();
         }, 5000);
     }, 5000);
 }
